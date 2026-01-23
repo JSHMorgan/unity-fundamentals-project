@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
-public class PlayerController : MonoBehaviour
+public class OldPlayerController : MonoBehaviour
 {
     // Inspector visible variables
     [Header("General")]

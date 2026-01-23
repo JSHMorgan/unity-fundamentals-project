@@ -1,12 +1,12 @@
 using UnityEngine;
 
-[RequireComponent (typeof(PlayerController))]
+[RequireComponent (typeof(OldPlayerController))]
 [RequireComponent (typeof(Animator))]
 
 public class PlayerAnimationController : MonoBehaviour
 {
     private Animator animator;
-    private PlayerController playerController;
+    private OldPlayerController playerController;
     private static readonly int idle = Animator.StringToHash("Idle");
     private static readonly int walk = Animator.StringToHash("Walk");
     private static readonly int jump = Animator.StringToHash("Jump");
@@ -15,10 +15,10 @@ public class PlayerAnimationController : MonoBehaviour
 
     void Start()
     {
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<OldPlayerController>();
         animator = GetComponent<Animator>();
         currentState = idle;
-        animator.CrossFade("Idle", 0, 0);
+        animator.CrossFade(idle, 0, 0);
     }
 
     void Update()
